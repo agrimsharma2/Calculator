@@ -1,4 +1,5 @@
 ﻿using Calculator.Models;
+using Calculator.Process;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,11 +7,11 @@ namespace Calculator.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly Adding adding = new Adding();
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(Adding adding)
         {
-            _logger = logger;
+            adding = adding;
         }
 
         public IActionResult Index()
@@ -38,7 +39,7 @@ namespace Calculator.Controllers
             switch (Cal)
             {
                 case "Add":
-                    c = a + b;
+                    c = adding.Add(a, b);
                     break;
                 case "Sub":
                     c = a - b;

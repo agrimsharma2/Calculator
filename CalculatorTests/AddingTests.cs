@@ -15,7 +15,7 @@ namespace CalculatorTests
             int b = 20;
             string operation = "Add";
 
-            int expected = 3;
+            int expected = 30;
 
             // Act
             var result = adding.Add(a, b);

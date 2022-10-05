@@ -1,6 +1,3 @@
-using Calculator;
-using Calculator.Controllers;
-using Moq;
 using FluentAssertions;
 using Calculator.Process;
 

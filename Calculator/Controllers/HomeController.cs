@@ -7,11 +7,11 @@ namespace Calculator.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly Adding adding = new Adding();
+        private readonly Adding _adding = new Adding();
 
-        public HomeController(Adding adding)
+        public HomeController()
         {
-            adding = adding;
+            ///_adding = adding;
         }
 
         public IActionResult Index()
@@ -39,7 +39,7 @@ namespace Calculator.Controllers
             switch (Cal)
             {
                 case "Add":
-                    c = adding.Add(a, b);
+                    c = _adding.Add(a, b);
                     break;
                 case "Sub":
                     c = a - b;

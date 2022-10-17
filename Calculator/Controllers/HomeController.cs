@@ -35,20 +35,20 @@ namespace Calculator.Controllers
         {
             int a = Convert.ToInt32(firstNumber);
             int b = Convert.ToInt32(secondNumber);
-            int c = 0;
+            float c = 0;
             switch (Cal)
             {
                 case "Add":
                     c = _adding.Add(a, b);
                     break;
                 case "Sub":
-                    c = a - b;
+                    c = (float)a - b;
                     break;
                 case "Mul":
-                    c = a * b;
+                    c = (float)a * b;
                     break;
                 case "Div":
-                    c = a / b;
+                    c = (float)a / b;
                     break;
             }
             ViewBag.Result = c;

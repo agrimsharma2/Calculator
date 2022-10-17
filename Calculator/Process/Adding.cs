@@ -6,9 +6,9 @@
         {
         }
 
-        public int Add(int a, int b)
+        public float Add(int a, int b)
         {
-            return a + b;
+            return (float)(a + b);
         }
 
     }

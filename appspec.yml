@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /Calculator/
+  - source: /CalculatorApp/
     destination: /home/ec2-user/Calculator/
 # hooks:
 #   BeforeInstall:

@@ -1,4 +1,5 @@
 #!/bin/bash
+pkill Calculator
 deploymentGroupId=$(aws deploy get-deployment-group --application-name calculator_app --deployment-group-name dev_group --query "deploymentGroupInfo.deploymentGroupId" --region ap-southeast-2)
 deploymentId=$(aws deploy get-deployment-group --application-name calculator_app --deployment-group-name dev_group --query "deploymentGroupInfo.lastAttemptedDeployment.deploymentId" --region ap-southeast-2)
 deploymentGroupId=("${deploymentGroupId: 1:-1}")

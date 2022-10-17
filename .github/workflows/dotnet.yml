@@ -38,6 +38,6 @@ jobs:
       run: |
         aws deploy create-deployment \
           --application-name calculator_app \
-          --deployment-group-name dev_group \
+          --deployment-group-name test_group \
           --deployment-config-name CodeDeployDefault.OneAtATime \
           --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
